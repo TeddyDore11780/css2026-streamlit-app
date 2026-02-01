@@ -4,19 +4,23 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-st.title("Title heading")
+def main():
+    st.title("Title heading")
 
-st.write("Hello, Streamlit!")
+    st.write("Hello, Streamlit!")
 
-st.header("Sample Data")
+    st.header("Sample Data")
+    data = pd.DataFrame({
+        "x": [1, 2, 3],
+        "y": [10, 20, 30]
+    })
+    st.write(data)
 
-data = pd.DataFrame({"x": [1, 2, 3], "y": [10, 20, 30]})
+    fig = px.line(data, x="x", y="y", title="Simple Plotly Example")
+    st.plotly_chart(fig)
 
-# Display the data in the Streamlit app
-st.write(data)
+    st.header("Bike Data Plot")
+    df = pd.read_csv("bike_data.csv")
 
-# Create a Plotly figure
-fig = px.line(data, x="x", y="y", title="Simple Plotly Example")
-
-# Display the plot in the Streamlit app
-st.plotly_chart(fig)
+    # Streamlit native line chart
+    st.line_chart(df["n_rented_bikes"])
