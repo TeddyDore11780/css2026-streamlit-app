@@ -5,9 +5,9 @@ import plotly.express as px
 import streamlit as st
 
 def main():
-    st.title("Title heading")
+    st.title("Kelly's Space")
 
-    st.write("Hello, Streamlit!")
+    st.write("Hosted by Streamlit!")
 
     st.header("Sample Data")
     data = pd.DataFrame({
@@ -24,3 +24,4 @@ def main():
 
     # Streamlit native line chart
     st.line_chart(df["n_rented_bikes"])
+
