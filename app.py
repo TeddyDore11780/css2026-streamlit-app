@@ -6,6 +6,13 @@ Created on Tue Jan 27 17:32:56 2026
 """
 
 import streamlit as st
+import pandas as pd
+
+def main():
+    st.header("Overview")
+
+    df = pd.read_csv("bike_data.csv")
+    st.dataframe(df.head())
 
 st.write("Hello2")
 
@@ -16,4 +23,5 @@ st.write("Hello, Streamlit!")
 st.header("Number selection")
 
 number = st.slider("Pick a number", 1, 100)
+
 st.write(f"You picked: {number}")
