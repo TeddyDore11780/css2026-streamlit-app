@@ -9,9 +9,9 @@ def main():
 
     # Profile Section
     st.header("Researcher Overview")
-    name = "Dr. Jane Doe"
-    field = "Astrophysics"
-    institution = "University of Science"
+    name = "Hon Sonwabile Theodore Mbelebele"
+    field = "Computer Engineering"
+    institution = "Cape Peninsula University of Technology"
 
     st.write(f"**Name:** {name}")
     st.write(f"**Field of Research:** {field}")
@@ -101,4 +101,5 @@ def main():
 
     # Contact Section
     st.header("Contact Information")
-    st.write("📧 jane.doe@example.com")
+    st.write("📧 tmbelebele@gmail.com")
+
