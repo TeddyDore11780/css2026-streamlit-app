@@ -1,26 +1,16 @@
-import streamlit as st
-import app
-import app_plots
-import app_profiler
-import app_profiler_menus
+"""
 
-st.set_page_config(
-    page_title="CSS2026 Streamlit App",
-    layout="wide",
+@author: Sonwabile Theodore Mbelebele 208015035
+"""
+
+import subprocess
+
+file = "app.py"
+file = "app_plots.py"
+file = "app_profiler.py"
+#file = "app_profiler_menus.py"
+
+
+subprocess.Popen(
+    ["streamlit", "run", file], shell=True
 )
-
-st.title("CSS2026 Dashboard")
-
-menu = st.sidebar.radio(
-    "Main Navigation",
-    ["Overview", "Plots", "Profiler", "Researcher Menu"],
-)
-
-if menu == "Overview":
-    app.main()
-elif menu == "Plots":
-    app_plots.main()
-elif menu == "Profiler":
-    app_profiler.main()
-elif menu == "Researcher Menu":
-    app_profiler_menus.main()
